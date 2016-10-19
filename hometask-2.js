@@ -11,3 +11,22 @@ function isPowerOfTwo(verificationNumber, baseOfVerNumber){
         return false;
     }
 }
+
+
+var increment;
+var currentCallCount=0;
+function makeIncrement(increment){
+    increment = ++increment;
+    var numberOfCalls=(function makeCallCounter(){
+                            return function(){
+                                ++currentCallCount
+                                return currentCallCount;
+                                }
+                        })();
+     var obj={
+            value: increment,
+            calls: numberOfCalls()
+    }
+   
+    return obj;
+}
