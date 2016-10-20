@@ -15,9 +15,9 @@ function getFibonachchiArray(n){
     }
 return fibonachchiArray
 }
-fibonachchiArray = getFibonachchiArray(40);
-const evenValuesFibonachchi = fibonachchiArray.filter(x => x%2===0);
-const oddValuesFibonachchi = fibonachchiArray.filter(x => x%2!=0);
+fibonachchiArrayOf40 = getFibonachchiArray(40);
+const evenValuesFibonachchi = fibonachchiArrayOf40.filter(x => x%2===0);
+const oddValuesFibonachchi = fibonachchiArrayOf40.filter(x => x%2!=0);
 const changedEvenValues=evenValuesFibonachchi.map(x=>x-2);
 const resultChangedEvenValues=changedEvenValues.reduce(function getSum(sum,current){return sum+current});
 const changedOddValues=oddValuesFibonachchi.map(x=>x-4);
