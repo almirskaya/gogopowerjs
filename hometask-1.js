@@ -16,14 +16,14 @@ function getFibonachchiArray(n){
 return fibonachchiArray
 }
 fibonachchiArray = getFibonachchiArray(40);
-var evenValuesFibonachchi = arrayNumbers.filter(x => x%2===0);
-var oddValuesFibonachchi = arrayNumbers.filter(x => x%2!=0);
-var changedEvenValues=evenValuesFibonachchi.map(x=>x-2);
-var resultChangedEvenValues=changedEvenValues.reduce(function getSum(sum,current){return sum+current});
-var changedOddValues=oddValuesFibonachchi.map(x=>x-4);
-var resultChangedOddValues=changedOddValues.reduce(function getSum(sum,current){return sum+current});
-var averageResultOdd=resultChangedOddValues/(oddValuesFibonachchi.length+1);
-var averageResultEven=resultChangedEvenValues/(evenValuesFibonachchi.length+1);
+const evenValuesFibonachchi = fibonachchiArray.filter(x => x%2===0);
+const oddValuesFibonachchi = fibonachchiArray.filter(x => x%2!=0);
+const changedEvenValues=evenValuesFibonachchi.map(x=>x-2);
+const resultChangedEvenValues=changedEvenValues.reduce(function getSum(sum,current){return sum+current});
+const changedOddValues=oddValuesFibonachchi.map(x=>x-4);
+const resultChangedOddValues=changedOddValues.reduce(function getSum(sum,current){return sum+current});
+const averageResultOdd=resultChangedOddValues/(oddValuesFibonachchi.length+1);
+const averageResultEven=resultChangedEvenValues/(evenValuesFibonachchi.length+1);
 console.log(oddValuesFibonachchi);
 console.log(evenValuesFibonachchi);
 console.log(changedEvenValues);
