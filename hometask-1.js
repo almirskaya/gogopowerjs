@@ -1,6 +1,6 @@
+var fibonachchiArray = [];
 function getFibonachchiArray(n){
     var getSum = 0;
-    var fibonachchiArray = [];
     for( var i=0; i<n; i++) {
         if (fibonachchiArray.length > 1) {
              getSum += fibonachchiArray[fibonachchiArray.length-2]
@@ -15,7 +15,7 @@ function getFibonachchiArray(n){
     }
 return fibonachchiArray
 }
-getFibonachchiArray(40);
+fibonachchiArray = getFibonachchiArray(40);
 var evenValuesFibonachchi = arrayNumbers.filter(x => x%2===0);
 var oddValuesFibonachchi = arrayNumbers.filter(x => x%2!=0);
 var changedEvenValues=evenValuesFibonachchi.map(x=>x-2);
