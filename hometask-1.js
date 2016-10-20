@@ -1,9 +1,19 @@
-var arrayNumbers=[1,1];
 function getFibonachchiArray(n){
-        for (var i=2;i<n;i++){
-            arrayNumbers[i]=arrayNumbers[i-1]+arrayNumbers[i-2];
+    var getSum = 0;
+    var fibonachchiArray = [];
+    for( var i=0; i<n; i++) {
+        if (fibonachchiArray.length > 1) {
+             getSum += fibonachchiArray[fibonachchiArray.length-2]
+        }
+        if (fibonachchiArray.length === 1) {
+            getSum = 1
+        }
+        if (fibonachchiArray.length === 0) {
+            getSum = 1
+        }
+        fibonachchiArray.push(getSum);
     }
-    return arrayNumbers;
+return fibonachchiArray
 }
 getFibonachchiArray(40);
 var evenValuesFibonachchi = arrayNumbers.filter(x => x%2===0);
